@@ -52,7 +52,7 @@ private:
   void DoInitialize (void);
   void Count (void);
 
-  TracedValue<uint32_t> m_counter;
+  TracedValue<double> m_counter;
   Ptr<ExponentialRandomVariable> m_var;
 };
 
@@ -124,11 +124,11 @@ int main (int argc, char *argv[])
                             "Time (Seconds)",
                             "Emitter Count",
                             "png");
-
+ 
   // Create a probe.  Because the trace source we are interested in is 
   // of type uint32_t, we specify the type of probe to use by the first
   // argument specifying its ns3 TypeId.
-  plotHelper.PlotProbe ("ns3::Uinteger32Probe",
+  plotHelper.PlotProbe ("ns3::DoubleProbe",
                         "/Names/Emitter/Counter",
                         "Output",
                         "Emitter Count",
