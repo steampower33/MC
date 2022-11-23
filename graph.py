@@ -12,7 +12,7 @@ time = []
 for line in data.split("\n"):
     t, s, _ = map(float, line.split("\t"))
     time.append(t)
-    time.append(s)
+    cwnd.append(s)
 
 plt.title("sixth.cc Tracing Result")
 plt.xlabel("Time(s)")
